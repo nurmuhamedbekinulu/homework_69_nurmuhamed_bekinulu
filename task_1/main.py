@@ -10,7 +10,6 @@ class CalcHandler(BaseHTTPRequestHandler):
         self.wfile.write(response.encode('utf-8'))
     
     def do_POST(self):
-        print(self.command )
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length)
         try:
