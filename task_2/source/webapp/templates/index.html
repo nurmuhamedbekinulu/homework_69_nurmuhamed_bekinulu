@@ -1,0 +1,44 @@
+{% load static %}
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container col-4 mt-5">
+        <h1 class="text-center">Calculator</h1>
+        <form class="">
+            <div class="row g-3 align-items-center text-center">
+                <div class="col-3">
+                  <label for="first_number" class="col-form-label">Number 1: </label>
+                </div>
+                <div class="col-9">
+                  <input type="text" id="first_number" class="form-control">
+                </div>
+            </div>
+            <div class="row g-3 align-items-center text-center">
+                <div class="col-3">
+                  <label for="second_number" class="col-form-label">Number 2: </label>
+                </div>
+                <div class="col-9">
+                  <input type="text" id="second_number" class="form-control">
+                </div>
+            </div>
+            <div class="my-3 mx-5">
+                <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+                <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+                <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+                <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+
+            </div>
+        </form>
+    
+    </div>
+
+</body>
+</html>
