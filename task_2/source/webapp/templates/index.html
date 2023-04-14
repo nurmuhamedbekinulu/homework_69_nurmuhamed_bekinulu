@@ -35,36 +35,10 @@
                 <button type="submit" id="multiply" class="btn btn-primary mb-3 col-5">multiply</button>
                 <button type="submit" id="divide" class="btn btn-primary mb-3 col-5">divide</button>
             </div>
+            <p id="result"></p>
         </form>
     </div>
 <script>
-  if (isNaN(first_number) || isNaN(second_number)) {
-    $("#result").html("Ошибка: введите два числа");
-    $("#result").addClass("error");
-    return;
-}
-
-$.ajax({
-    url: "/" + operation + "/",
-    type: "POST",
-    data: JSON.stringify({
-        "A": num1,
-        "B": num2
-    }),
-    contentType: "application/json; charset=utf-8",
-    dataType: "json",
-    success: function(data) {
-        $("#result").html("Результат: " + data.answer);
-        $("#result").removeClass();
-        $("#result").addClass("success");
-    },
-    error: function(jqXHR, textStatus, errorThrown) {
-        var errorMessage = JSON.parse(jqXHR.responseText).error;
-        $("#result").html("Ошибка: " + errorMessage);
-        $("#result").removeClass();
-        $("#result").addClass("error");
-    }
-});
 
 </script>
 </body>
